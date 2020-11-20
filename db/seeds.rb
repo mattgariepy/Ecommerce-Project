@@ -161,10 +161,10 @@ end
 
 puts "Created #{Product.count} products"
 puts "Created #{Category.count} categories"
-puts "Created #{OrderItem.count} order items"
-puts "Created #{Order.count} orders"
-puts "Created #{OrderProduct.count} order products"
-puts "Created #{Customer.count} customers"
-puts "Created #{Province.count} provinces"
+# puts "Created #{OrderItem.count} order items"
+# puts "Created #{Order.count} orders"
+# puts "Created #{OrderProduct.count} order products"
+# puts "Created #{Customer.count} customers"
+# puts "Created #{Province.count} provinces"
 
 #AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
