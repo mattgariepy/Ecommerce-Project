@@ -4,4 +4,6 @@ class Product < ApplicationRecord
 
   validates :name, :brand, :season, :description, :price, presence: true
   validates :price,  numericality: true
+
+  has_one_attached :image
 end
