@@ -1,8 +1,8 @@
 class Product < ApplicationRecord
   belongs_to :category
-  has_many :order_products
+  has_many :order_products, :dependent => :destroy
 
-  validates :name, :brand, :season, :description, :price, presence: true
+  validates :name, :description, :price, presence: true
   validates :price,  numericality: true
 
   has_one_attached :image
