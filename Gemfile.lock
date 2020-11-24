@@ -274,6 +274,7 @@ DEPENDENCIES
   devise
   httparty
   jbuilder (~> 2.7)
+  kaminari
   listen (~> 3.2)
   nokogiri (~> 1.6, >= 1.6.8)
   puma (~> 4.1)
