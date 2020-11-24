@@ -1,2 +1,16 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
+<% @categories.each do |category| %>
+<div class="card">
+  <div class="card-content">
+    <p class="title">
+      <%= link_to category.name, category%>
+    </p>
+  </div>
+  <footer class="card-footer">
+    <p class="card-footer-item">
+      <span>
+        Products: <%= category.products.count %>
+      </span>
+    </p>
+  </footer>
+</div>
+<% end %>
