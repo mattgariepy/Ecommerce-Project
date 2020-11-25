@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   collection do
     get 'onSale'
     get 'new'
+    get 'search'
   end
 end
   resources :categories, only: [:index, :show]
