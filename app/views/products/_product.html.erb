@@ -1,16 +1,20 @@
 <div class="box">
   <article class="media">
     <div class="media-left">
-      <figure class="image is-64x64">
-        <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+      <figure class="image is-96x96">
+       <% !if product.image.attached? %>
+          <%= image_tag product.image %>
+        <% else %>
+          <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+        <% end %>
       </figure>
     </div>
     <div class="media-content">
       <div class="content">
         <p>
-          <strong><%= product.name %></strong> <small>$<%= product.price%></small>  <small><%= product.category.name%></small>
+          <strong><%= link_to product.name, product %></strong>
           <br>
-          <%= product.description%>
+          $<%= product.price%>
         </p>
       </div>
     </div>
