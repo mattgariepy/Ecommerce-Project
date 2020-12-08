@@ -17,5 +17,7 @@ Rails.application.routes.draw do
 
   resources :categories, only: [:index, :show]
 
+  resources :cart, only: [:create, :destroy]
+
   root to: 'home#index'
 end

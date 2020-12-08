@@ -61,6 +61,10 @@
           </div>
         </div>
       <% end %>
+      <%= debug session[:shopping_cart] %>
+      <% if flash[:notice] %>
+        <p><%= flash[:notice] %></p>
+      <% end %>
       <% if notice %>
         <p class="alert alert-success"><%= notice %></p>
       <% end %>

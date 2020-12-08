@@ -17,6 +17,12 @@
           $<%= product.price%>
         </p>
       </div>
+      <div class="content">
+        <%= form_with url: cart_index_path, method: :post do%>
+          <%= hidden_field_tag(:id, product.id)%>
+          <%= button_tag "Add To Cart" %>
+        <% end %>
+      </div>
     </div>
   </article>
 </div>
