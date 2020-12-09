@@ -5,7 +5,7 @@ class CartController < ApplicationController
       session[:shopping_cart] << id
       product = Product.find(id)
       flash[:notice] = "#{product.name} added to cart!"
-      # redirect_to root_path
+      redirect_to root_path
     end
   end
 
@@ -14,6 +14,6 @@ class CartController < ApplicationController
     product = Product.find(id)
     session[:shopping_cart].delete(id)
     flash[:notice] = "#{product.name} removed from cart!"
-    # redirect_to root_path
+    redirect_to root_path
   end
 end
