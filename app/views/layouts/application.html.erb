@@ -43,6 +43,21 @@
               <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-item'  %>
               <%= link_to "Login", new_user_session_path, :class => 'navbar-item'  %>
             <% end %>
+             <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                Cart
+                <% if cart.present? %>
+                  <sup><%= cart.size %></sup>
+                <% end %>
+              </a>
+              <div class="navbar-dropdown">
+              <% cart.each do |product| %>
+                  <a class="navbar-item">
+                    <%= product.name %> <%= link_to "❌", cart_path(product), method: :delete %>
+                </a>
+              <% end %>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
