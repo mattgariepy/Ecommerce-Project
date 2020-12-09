@@ -1,16 +1,15 @@
 <% @categories.each do |category| %>
-<div class="card">
-  <div class="card-content">
-    <p class="title">
-      <%= link_to category.name, category%>
-    </p>
-  </div>
-  <footer class="card-footer">
-    <p class="card-footer-item">
-      <span>
-        Products: <%= category.products.count %>
-      </span>
-    </p>
-  </footer>
+<div class="box">
+  <article class="media">
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong><%= link_to category.name, category%></strong>
+          <br>
+          There are <%= category.products.count %> products in this category.
+        </p>
+      </div>
+    </div>
+  </article>
 </div>
 <% end %>
