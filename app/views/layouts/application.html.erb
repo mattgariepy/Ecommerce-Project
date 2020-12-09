@@ -13,7 +13,7 @@
 
   <body>
   <%= javascript_pack_tag 'navbar_overflow' %>
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar mb-2" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="/">
       Home
@@ -83,25 +83,9 @@
           <%= link_to "Login", new_user_session_path, :class => 'navbar-item'  %>
         <% end %>
       </div>
-      <%# <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-info">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-info">
-            Log in
-          </a>
-        </div>
-      </div> %>
     </div>
   </div>
 </nav>
-
-
-
-
-
-
         <%= form_with(url: search_products_path, method: :get, local: true) do %>
           <div class="field is-grouped mb-4">
             <div class="control">

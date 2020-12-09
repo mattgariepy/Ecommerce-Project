@@ -26,7 +26,7 @@
       <% else %>
         <%= form_with url: cart_index_path, method: :post do%>
           <%= hidden_field_tag(:id, product.id)%>
-          <%= button_tag "Add To Cart" %>
+          <%= button_tag "Add To Cart", class: "button is-info" %>
         <% end %>
       <% end %>
       </div>

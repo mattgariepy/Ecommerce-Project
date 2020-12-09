@@ -21,13 +21,13 @@
       </div>
       <div class="content">
       <% if cart.include?(pro)%>
-        <%= button_to cart_path(pro), method: :delete do %>
+        <%= button_to cart_path(pro),  class:"button is-info" ,method: :delete do %>
           Remove From Cart
         <% end %>
       <% else %>
         <%= form_with url: cart_index_path, method: :post do%>
           <%= hidden_field_tag(:id, pro.id)%>
-          <%= button_tag "Add To Cart" %>
+          <%= button_tag "Add To Cart", class: "button is-info" %>
         <% end %>
       <% end %>
       </div>
@@ -58,13 +58,13 @@
       </div>
       <div class="content">
       <% if cart.include?(product)%>
-        <%= button_to cart_path(product), method: :delete do %>
+        <%= button_to cart_path(product), class:"button is-info" ,method: :delete do %>
           Remove From Cart
         <% end %>
       <% else %>
         <%= form_with url: cart_index_path, method: :post do%>
           <%= hidden_field_tag(:id, product.id)%>
-          <%= button_tag "Add To Cart" %>
+          <%= button_tag "Add To Cart", class: "button is-info" %>
         <% end %>
       <% end %>
       </div>
